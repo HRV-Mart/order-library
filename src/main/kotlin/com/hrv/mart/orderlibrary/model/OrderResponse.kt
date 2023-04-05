@@ -9,6 +9,7 @@ import java.time.LocalDateTime
 data class OrderResponse (
     val userId: String,
     val products: List<CartResponse>,
+    val price: Long,
     val status: Status = Status.PROCESS,
     val dateTimeOfOrder: LocalDateTime = LocalDateTime.now()
 )

@@ -6,10 +6,12 @@ import com.hrv.mart.cartresponse.model.CartResponse
 data class OrderRequest (
     val userId: String,
     val products: List<CartResponse>,
+    val price: Long
 ) {
     fun getOrderResponse() =
         OrderResponse(
             userId=userId,
-            products=products
+            products=products,
+            price=price
         )
 }
