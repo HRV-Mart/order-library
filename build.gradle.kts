@@ -55,6 +55,8 @@ dependencies {
     implementation("io.projectreactor.kafka:reactor-kafka")
     implementation("org.springframework.kafka:spring-kafka")
     testImplementation("org.springframework.kafka:spring-kafka-test")
+    // API-Call
+    implementation("com.hrv.mart:api-call:0.0.3")
 }
 
 tasks.withType<KotlinCompile> {
