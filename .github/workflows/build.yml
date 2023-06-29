@@ -9,7 +9,7 @@ on:
     branches:
       - 'master'
 env:
-
+  VERSION: "0.0.1-SNAPSHOT"
   USERNAME: ${{ secrets.OSSRH_USERNAME }}
   TOKEN: ${{ secrets.OSSRH_TOKEN }}
 jobs:
