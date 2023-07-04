@@ -12,6 +12,8 @@ env:
   VERSION: "0.0.1-SNAPSHOT"
   USERNAME: ${{ secrets.OSSRH_USERNAME }}
   TOKEN: ${{ secrets.OSSRH_TOKEN }}
+  ORDER_URL: http://localhost:8085
+  KAFKA_SERVER: localhost:9092
 jobs:
   build:
     name: Build
