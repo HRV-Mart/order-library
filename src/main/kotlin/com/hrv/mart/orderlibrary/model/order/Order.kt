@@ -22,4 +22,25 @@ data class Order (
                 price = orderRequest.price
             )
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Order
+
+        if (userId != other.userId) return false
+        if (price != other.price) return false
+        if (orderId != other.orderId) return false
+        return status == other.status
+    }
+
+    override fun hashCode(): Int {
+        var result = userId.hashCode()
+        result = 31 * result + price.hashCode()
+        result = 31 * result + orderId.hashCode()
+        result = 31 * result + status.hashCode()
+        return result
+    }
+
 }
