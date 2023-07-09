@@ -6,6 +6,7 @@ import com.hrv.mart.orderlibrary.model.order.ProductOrdered
 import java.time.LocalDateTime
 
 data class OrderResponse (
+    val orderId: String,
     val userId: String,
     val products: List<CartResponse>,
     val price: Long,
@@ -15,6 +16,7 @@ data class OrderResponse (
     companion object {
         fun parseFrom (order: Order, productOrdered: List<ProductOrdered>) =
             OrderResponse(
+                orderId = order.orderId,
                 userId = order.userId,
                 price = order.price,
                 products = productOrdered
